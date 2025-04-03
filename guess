@@ -1,0 +1,19 @@
+#!/bin/bash
+numero_secreto=$(( $RANDOM % 100 + 1 ))
+intentos=0
+
+echo "Avidina el numero random (1 entre 100)"
+
+while(true); do
+	read -p "Introduce tu intento: " intento
+	((intentos++))
+
+	if (( intento ==  numero_secreto )); then
+		echo "Numero correcto, Adivinaste en $intentos intentos!!"
+		break
+	elif (( intento < numero_secreto )); then
+		echo "Numero incorrecto, el numero a adivinar  es mayor"
+	else
+		echo "Numero incorrecto, el numero a adivinar  es menor"
+	fi
+done

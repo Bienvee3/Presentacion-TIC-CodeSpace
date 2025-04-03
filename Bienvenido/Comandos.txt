@@ -1,0 +1,7 @@
+ls -> listar archivos
+ls - l -> en vertical
+mkdir -> crear carpetas 
+echo -> imprimir
+echo -e -> imprimir varias lineas en un mismo frame
+rm -r -> borrar carpeta con contenido 
+
