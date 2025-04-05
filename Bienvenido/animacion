@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Efecto Matrix en terminal
+green='\033[0;32m'
+nc='\033[0m' # Sin color
+
+clear
+echo -e "${green}Iniciando Matrix...${nc}"
+sleep 1
+
+# Dimensiones de la terminal
+cols=$(tput cols)
+lines=$(tput lines)
+
+# Caracteres posibles
+chars='01'
+
+while true; do
+    for ((i=0; i<$cols; i++)); do
+        rand=$(( RANDOM % 20 ))
+        if [[ $rand -lt 2 ]]; then
+            printf "\033[%s;%sH\033[1;32m%s" $(( RANDOM % lines )) $i "${chars:RANDOM%2:1}"
+        fi
+    done
+    sleep 0.05
+done
