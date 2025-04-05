@@ -1,7 +1,10 @@
-ls -> listar archivos
-ls - l -> en vertical
-mkdir -> crear carpetas 
-echo -> imprimir
-echo -e -> imprimir varias lineas en un mismo frame
-rm -r -> borrar carpeta con contenido 
+ls                     # Listar archivos
+ls - l                 # En vertical
+mkdir                  # Crear carpetas 
+echo                   # Imprimir
+echo -e                # Imprimir varias lineas en un mismo frame
+touch archivo.txt      # Crea archivo vacío
+mkdir carpeta          # Crea carpeta
+rm archivo.txt         # Borra archivo
+rm -r carpeta          # Borra carpeta con contenido
 
