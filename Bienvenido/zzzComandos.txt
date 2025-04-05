@@ -1,7 +1,15 @@
 ls -> listar archivos
 ls - l -> en vertical
 mkdir -> crear carpetas 
+nano -> crear archivos
 echo -> imprimir
 echo -e -> imprimir varias lineas en un mismo frame
 rm -r -> borrar carpeta con contenido 
+chmod +x -> dar permisos
 
+
+(BannerArts)
+
+sudo apt update
+sudo apt install -y ruby
+sudo gem install lolcat

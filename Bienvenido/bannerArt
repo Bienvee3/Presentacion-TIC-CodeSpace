@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Verifica que estén instalados
+for cmd in figlet toilet lolcat; do
+  if ! command -v $cmd &> /dev/null; then
+    echo "Instalando $cmd..."
+    sudo apt update && sudo apt install -y $cmd
+  fi
+done
+
+clear
+
+echo "🎨 Mostrando banners personalizados..."
+
+sleep 1
+
+echo -e "\n🔤 Con figlet + lolcat:"
+figlet "Ghostbusters" | lolcat
+
+sleep 1
+
+echo -e "\n🔤 Con toilet (fuente futura) + colores:"
+toilet -f future "ASCII Art" --gay
+
+sleep 1
+
+echo -e "\n🔤 Con toilet (metal estilo sangriento 💀):"
+toilet -f mono12 -F metal "Terminal Fun"
+
+echo -e "\n✅ ¡Listo! Puedes combinar efectos para crear intros, títulos o menús animados en terminal."
