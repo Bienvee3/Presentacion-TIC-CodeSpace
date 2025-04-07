@@ -1,26 +1,40 @@
 #!/bin/bash
 
 # Efecto Matrix en terminal
-green='\033[0;32m'
-nc='\033[0m' # Sin color
 
+# Definir el color verde para los caracteres
+green='\033[0;32m'
+# Definir el color por defecto (sin color)
+nc='\033[0m'
+
+# Limpiar la pantalla
 clear
+# Imprimir mensaje de inicio con el color verde
 echo -e "${green}Iniciando Matrix...${nc}"
+# Esperar 1 segundo antes de continuar
 sleep 1
 
-# Dimensiones de la terminal
+# Obtener el número de columnas y filas de la terminal
 cols=$(tput cols)
 lines=$(tput lines)
 
-# Caracteres posibles
+# Definir los caracteres posibles para el efecto (0 y 1)
 chars='01'
 
+# Iniciar un bucle infinito
 while true; do
+    # Recorrer cada columna de la terminal
     for ((i=0; i<$cols; i++)); do
+        # Generar un número aleatorio entre 0 y 19
         rand=$(( RANDOM % 20 ))
+        
+        # Si el número aleatorio es menor que 2, dibujar un carácter
         if [[ $rand -lt 2 ]]; then
+            # Mover el cursor a una fila aleatoria y columna actual
+            # Imprimir un carácter (0 o 1) en color verde
             printf "\033[%s;%sH\033[1;32m%s" $(( RANDOM % lines )) $i "${chars:RANDOM%2:1}"
         fi
     done
+    # Esperar 0.05 segundos antes de la siguiente iteración
     sleep 0.05
 done

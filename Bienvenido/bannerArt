@@ -1,30 +1,45 @@
 #!/bin/bash
 
-# Verifica que estén instalados
+# Verifica que estén instalados figlet, toilet y lolcat
 for cmd in figlet toilet lolcat; do
+  # Si alguno de los comandos no está instalado, lo instala
   if ! command -v $cmd &> /dev/null; then
+    # Muestra un mensaje indicando que se va a instalar el comando
     echo "Instalando $cmd..."
+    # Actualiza los repositorios e instala el comando necesario
     sudo apt update && sudo apt install -y $cmd
   fi
 done
 
+# Limpiar la pantalla para hacer espacio para la salida
 clear
 
+# Mensaje que indica que se van a mostrar banners personalizados
 echo "🎨 Mostrando banners personalizados..."
 
+# Pausa de 1 segundo antes de continuar
 sleep 1
 
+# Mostrar un banner con figlet (texto ASCII) y luego pasa la salida por lolcat (efecto de texto cómico)
 echo -e "\n🔤 Con figlet + lolcat:"
+# El texto "Ghostbusters" es procesado con figlet y luego pasa por lolcat para un efecto gracioso
 figlet "Ghostbusters" | lolcat
 
+# Pausa de 1 segundo antes de mostrar el siguiente banner
 sleep 1
 
+# Mostrar un banner con toilet usando la fuente "future" y aplicando el efecto de colores arcoíris (--gay)
 echo -e "\n🔤 Con toilet (fuente futura) + colores:"
+# El texto "ASCII Art" se muestra con la fuente "future" y el color arcoíris
 toilet -f future "ASCII Art" --gay
 
+# Pausa de 1 segundo antes de mostrar el siguiente banner
 sleep 1
 
+# Mostrar un banner con toilet usando la fuente "mono12" y el efecto de "metal", que crea un estilo de texto sangriento
 echo -e "\n🔤 Con toilet (metal estilo sangriento 💀):"
+# El texto "Terminal Fun" se muestra con la fuente "mono12" y el estilo metal (💀)
 toilet -f mono12 -F metal "Terminal Fun"
 
+# Mensaje final que indica que ya está listo
 echo -e "\n✅ ¡Listo! Puedes combinar efectos para crear intros, títulos o menús animados en terminal."
