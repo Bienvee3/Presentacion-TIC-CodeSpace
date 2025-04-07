@@ -43,3 +43,11 @@ toilet -f mono12 -F metal "Terminal Fun"
 
 # Mensaje final que indica que ya está listo
 echo -e "\n✅ ¡Listo! Puedes combinar efectos para crear intros, títulos o menús animados en terminal."
+
+
+#Permisos ejecucion
+
+  #chmod +x bannerArt
+  #sudo apt update
+  #sudo apt install -y ruby
+  #sudo gem install lolcat

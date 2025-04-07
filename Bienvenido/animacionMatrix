@@ -38,3 +38,5 @@ while true; do
     # Esperar 0.05 segundos antes de la siguiente iteración
     sleep 0.05
 done
+
+#chmod +x animacionMatrix  -> permisos de ejecucion
