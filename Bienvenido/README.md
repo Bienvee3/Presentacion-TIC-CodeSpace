@@ -20,4 +20,8 @@ Ya viene listo para usar en Codespaces, pero si estás en local, puedes necesita
 
 ```bash
 sudo apt update && sudo apt install -y \
-figlet toilet lolcat jp2a caca-utils viu
+figlet toilet lolcat jp2a caca-utils viu \
+chmod +x "nombreArchivo"
+sudo apt update
+sudo apt install -y ruby
+sudo gem install lolcat
