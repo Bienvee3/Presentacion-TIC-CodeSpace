@@ -3,14 +3,14 @@
 # Efecto Matrix en terminal
 
 # Definir el color verde para los caracteres
-green='\033[0;32m'
+GREEN='\033[0;32m'
 # Definir el color por defecto (sin color)
-nc='\033[0m'
+NC='\033[0m'
 
 # Limpiar la pantalla
 clear
 # Imprimir mensaje de inicio con el color verde
-echo -e "${green}Iniciando Matrix...${nc}"
+echo -e "${GREEN}Iniciando Matrix...${NC}"
 # Esperar 1 segundo antes de continuar
 sleep 1
 
