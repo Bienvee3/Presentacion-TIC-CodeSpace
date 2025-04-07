@@ -1,3 +1,5 @@
+# Entorno de desarrollo
+
 # 🎨 Terminal Art & Animations – Shell Playground
 
 ¡Bienvenido a este proyecto creativo en GitHub Codespaces!  
